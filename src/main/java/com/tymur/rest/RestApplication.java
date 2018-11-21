@@ -1,4 +1,4 @@
-package com.tymur.rest.rest;
+package com.tymur.rest;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

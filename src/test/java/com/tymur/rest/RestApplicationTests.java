@@ -1,4 +1,4 @@
-package com.tymur.rest.rest;
+package com.tymur.rest;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;

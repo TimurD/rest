@@ -1,4 +1,6 @@
-package com.tymur.rest.rest.models;
+package com.tymur.rest.models;
+
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -6,12 +8,13 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 
+@JsonIgnoreProperties("id")
 @Entity
 public class Client {
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    private Long Id;
+    private Long id;
 
     @Column(name = "yearOfBorn")
     private Integer yearOfBorn;
@@ -22,11 +25,11 @@ public class Client {
     private String gender;
 
     public Long getId() {
-        return Id;
+        return id;
     }
 
     public void setId(Long id) {
-        Id = id;
+        this.id = id;
     }
 
     public Integer getYearOfBorn() {
