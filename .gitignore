@@ -26,3 +26,6 @@
 
 ### Maven ###
 .mvn/
+
+### Logs ###
+/logs
