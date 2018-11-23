@@ -1,8 +1,10 @@
 package com.tymur.rest.models;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+import com.tymur.rest.converters.GenderConverter;
 
 import javax.persistence.Column;
+import javax.persistence.Convert;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -22,6 +24,7 @@ public class Client {
     @Column(name = "loanState")
     private String loanState;
 
+    @Convert(converter = GenderConverter.class)
     private String gender;
 
     public Long getId() {
